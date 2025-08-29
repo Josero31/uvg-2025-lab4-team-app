@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/README.md">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/README.md" />
+              <option name="originalContent" value="# TeamApp - Ejercicio de GitHub con Android y Compose&#10;&#10;## Objetivo&#10;Este ejercicio tiene como objetivo practicar **colaboración con Git y GitHub** dentro de un proyecto Android nativo con **Kotlin y Jetpack Compose**.  &#10;Los estudiantes trabajarán en equipo, utilizando ramas, commits, Pull Requests y revisiones de código, simulando un flujo de trabajo real.&#10;" />
+              <option name="updatedContent" value="# TeamApp - Ejercicio de GitHub con Android y Compose&#10;&#10;## Objetivo&#10;Este ejercicio tiene como objetivo practicar **colaboración con Git y GitHub** dentro de un proyecto Android nativo con **Kotlin y Jetpack Compose**.  &#10;Los estudiantes trabajarán en equipo, utilizando ramas, commits, Pull Requests y revisiones de código, simulando un flujo de trabajo real.&#10;&#10;## Borrar el último commit&#10;&#10;1. Abre una terminal en la raíz del repositorio.&#10;2. Para borrar el último commit localmente:&#10;   ```sh&#10;   git reset --hard HEAD~1&#10;   ```&#10;3. Si el commit ya fue subido al remoto, fuerza el push:&#10;   ```sh&#10;   git push origin HEAD --force&#10;   ```&#10;&#10;&gt; **Advertencia:** El uso de `--hard` y `--force` puede causar pérdida de datos. Úsalo solo si estás seguro." />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
