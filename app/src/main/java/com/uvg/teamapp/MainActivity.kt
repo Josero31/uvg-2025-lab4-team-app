@@ -1,39 +1,31 @@
-@file:OptIn(androidx.compose.material3.ExperimentalMaterial3Api::class)
-
 package com.uvg.teamapp
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
+import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
-import com.uvg.teamapp.model.FakeTeamRepository
-import com.uvg.teamapp.model.TeamMember
+import androidx.compose.ui.tooling.preview.Preview
 import com.uvg.teamapp.ui.theme.TeamAppTheme
+import com.uvg.teamapp.ui.TeamListScreen
+import com.uvg.teamapp.model.FakeTeamRepository
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
         setContent {
             TeamAppTheme {
-                Scaffold(
-                    topBar = { TopAppBar(title = { Text("TeamApp") }) }
-                ) { innerPadding ->
+                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    // Usar el repositorio para obtener los miembros del equipo
+                    val members = FakeTeamRepository.getTeamMembers()
                     TeamListScreen(
-                        members = FakeTeamRepository.getTeamMembers(),
-                        contentPadding = innerPadding
+                        members = members,
+                        modifier = Modifier.padding(innerPadding)
                     )
                 }
             }
@@ -41,30 +33,13 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-/* ----------- UI dentro del mismo archivo ----------- */
-
+@Preview(showBackground = true)
 @Composable
-fun TeamListScreen(
-    members: List<TeamMember>,
-    contentPadding: PaddingValues
-) {
-    LazyColumn(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(contentPadding)
-            .padding(16.dp)
-    ) {
-        // 👇 esta es la firma correcta
-        items(members) { m ->
-            TeamMemberItem(member = m)
-        }
-    }
-}
-
-@Composable
-fun TeamMemberItem(member: TeamMember) {
-    Column(modifier = Modifier.padding(vertical = 8.dp)) {
-        Text(text = member.name, style = MaterialTheme.typography.titleMedium)
-        Text(text = member.description, style = MaterialTheme.typography.bodyMedium)
+fun MainActivityPreview() {
+    TeamAppTheme {
+        val members = com.uvg.teamapp.model.FakeTeamRepository.getTeamMembers()
+        TeamListScreen(
+            members = members
+        )
     }
 }

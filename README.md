@@ -27,3 +27,32 @@ Al finalizar:
     - Capturas de pantalla de la app funcionando.
     - Explicación de cómo resolvieron los conflictos y organizaron el flujo de trabajo.
     - Reflexión del equipo sobre lo aprendido.
+
+---
+
+### 📸 Capturas de pantalla
+
+![App corriendo](screenshots/programa_corriendo.png)
+
+---
+
+### 🔄 Organización del flujo de trabajo y resolución de conflictos
+
+- Cada integrante creó su propia rama de feature (`feature/nombre`).
+- Se realizaron commits pequeños y descriptivos para cada avance.
+- Al terminar cada feature, se abrió un Pull Request (PR) hacia la rama `develop`.
+- Otro compañero revisó el PR, dejó comentarios y aprobó los cambios.
+- Solo después de la aprobación, se hizo merge a `develop`.
+- Si hubo conflictos, se resolvieron antes de hacer merge, comunicándonos por chat y revisando los archivos afectados.
+- Finalmente, se abrió un PR de `develop` (nuestro repo) hacia `develop` del repositorio original, y todo el equipo revisó y aprobó la integración final.
+
+---
+
+### 💡 Reflexión del equipo
+
+Este ejercicio nos permitió practicar un flujo de trabajo colaborativo real usando Git y GitHub. Aprendimos a:
+- Trabajar en ramas independientes para evitar conflictos.
+- Hacer commits claros y frecuentes.
+- Usar Pull Requests y revisiones de código para mejorar la calidad del proyecto.
+- Resolver conflictos de integración de manera ordenada y comunicativa.
+- Valorar la importancia de la colaboración y la comunicación en proyectos de desarrollo de software.

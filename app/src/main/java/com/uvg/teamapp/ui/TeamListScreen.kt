@@ -1,12 +1,10 @@
-package ui
+package com.uvg.teamapp.ui
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.material3.Card
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
@@ -41,14 +39,13 @@ fun TeamListScreen(
 }
 
 @Preview(showBackground = true)
+
 @Composable
 fun TeamListScreenPreview() {
     val sampleMembers = listOf(
-        TeamMember("Jose sanchez", "Desarrolladora Kotlin"),
-        TeamMember("Diego Sandoval", "Diseñador UI/UX"),
-        TeamMember("Denis Rodriguez", "Tester"),
-        TeamMember("Ximena Aguilar", "Documentación")
+        TeamMember("Ana", "Desarrolladora Android"),
+        TeamMember("Luis", "Diseñador UI/UX"),
+        TeamMember("María", "Project Manager")
     )
     TeamListScreen(members = sampleMembers)
 }
-
