@@ -32,7 +32,8 @@ Al finalizar:
 
 ### 📸 Capturas de pantalla
 
-![App corriendo](screenshots/programa_corriendo.png)
+<img width="1080" height="2424" alt="programa_corriendo" src="https://github.com/user-attachments/assets/dc18b14f-6c3f-4e26-ae81-0e87074756ce" />
+
 
 ---
 
